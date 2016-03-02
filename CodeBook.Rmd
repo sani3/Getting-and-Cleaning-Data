@@ -1,0 +1,158 @@
+---
+title: "CodeBook"
+author: "Sani Stephen"
+date: "February 29, 2016"
+output: html_document
+---
+
+
+## Experiment Design
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+The set of variables that were estimated from these signals are: 
+
+mean(): Mean value
+std(): Standard deviation
+
+Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+
+gravityMean
+tBodyAccMean
+tBodyAccJerkMean
+tBodyGyroMean
+tBodyGyroJerkMean
+
+
+## Code Book
+
+The complete list of variables of each feature vector is available in 'features.txt'
+
+The fields for the tidy data set are described below
+
+"subject"
+                The unique integer id field for subjects in the experiment
+                1 ... 30
+
+"activity"     
+                The different activities that subjects carried out for which measurements were collected
+                label           activity
+                1            WALKING
+                2   WALKING_UPSTAIRS
+                3 WALKING_DOWNSTAIRS
+                4            SITTING
+                5           STANDING
+                6             LAYING
+
+"tBodyAcc-mean()-X"
+                Mean of time domain body acceleration in the X axis (m/s2)
+"tBodyAcc-mean()-Y"
+                Mean of time domain body acceleration in the Y axis (m/s2)
+"tBodyAcc-mean()-Z"
+                Mean of time domain body acceleration in the Z axis (m/s2)
+"tGravityAcc-mean()-X"
+                Mean of time domain body acceleration due to gravity in the X axis (m/s2)
+"tGravityAcc-mean()-Y"
+                Mean of time domain body acceleration due to gravity in the Y axis (m/s2)
+"tGravityAcc-mean()-Z"
+                Mean of time domain body acceleration due to gravity in the Z axis (m/s2)
+"tBodyAccJerk-mean()-X"
+                Mean of time domain body jerk acceleration in the X axis (m/s2)
+"tBodyAccJerk-mean()-Y"      
+                Mean of time domain body jerk acceleration in the Y axis (m/s2)
+"tBodyAccJerk-mean()-Z" 
+                Mean of time domain body jerk acceleration in the Z axis (m/s2)
+"tBodyGyro-mean()-X" 
+                Mean of time domain body gyrometer signal in the X axis (m/s2)
+"tBodyGyro-mean()-Y"
+                Mean of time domain body gyrometer signal in the Y axis (m/s2)
+"tBodyGyro-mean()-Z"  
+                Mean of time domain body gyrometer signal in the Z axis (m/s2)
+"tBodyGyroJerk-mean()-X" 
+                Mean of time domain body jerk gyrometer signal in the X axis (m/s2)
+"tBodyGyroJerk-mean()-Y"    
+                Mean of time domain body jerk gyrometer signal in the Y axis (m/s2)
+"tBodyGyroJerk-mean()-Z"  
+                Mean of time domain body jerk gyrometer signal in the Z axis (m/s2)
+"tBodyAccMag-mean()"
+                Mean of time domain body acceleration magnitude (m/s2)
+"tGravityAccMag-mean()"  
+                Mean of time domain body acceleration due to gravity magnitude (m/s2)
+"tBodyAccJerkMag-mean()"     
+                Mean of time domain body jerk acceleration magnitude (m/s2)
+"tBodyGyroMag-mean()" 
+                Mean of time domain body gyrometer signal magnitude (m/s2)
+"tBodyGyroJerkMag-mean()" 
+                Mean of time domain body jerk gyrometer signal magnitude (m/s2)
+"fBodyAcc-mean()-X" 
+                 Mean of frequency domain body acceleration in the X axis (rad/s)
+"fBodyAcc-mean()-Y" 
+                 Mean of frequency domain body acceleration in the Y axis (rad/s)
+"fBodyAcc-mean()-Z"   
+                Mean of frequency domain body acceleration in the Z axis (rad/s)
+"fBodyAcc-meanFreq()-X" 
+                Mean frequency of frequency domain body acceleration in the X axis (rad/s)
+"fBodyAcc-meanFreq()-Y" 
+                Mean frequency of frequency domain body acceleration in the Y axis (rad/s)
+"fBodyAcc-meanFreq()-Z" 
+                Mean frequency of frequency domain body acceleration in the Z axis (rad/s)
+"fBodyAccJerk-mean()-X" 
+                Mean of frequency domain body jerk acceleration in the X axis (rad/s)
+"fBodyAccJerk-mean()-Y" 
+                Mean of frequency domain body jerk acceleration in the Y axis (rad/s)
+"fBodyAccJerk-mean()-Z"   
+                Mean of frequency domain body jerk acceleration in the Y axis (rad/s)
+"fBodyAccJerk-meanFreq()-X" 
+                Mean frequency of frequency domain body jerk acceleration in the X axis (rad/s)
+"fBodyAccJerk-meanFreq()-Y"  
+                Mean frequency of frequency domain body jerk acceleration in the Y axis (rad/s)
+"fBodyAccJerk-meanFreq()-Z"
+                Mean frequency of frequency domain body jerk acceleration in the Z axis (rad/s)
+"fBodyGyro-mean()-X" 
+                Mean of frequency domain body gyrometer signal in the X axis (rad/s)
+"fBodyGyro-mean()-Y"
+                Mean of frequency domain body gyrometer signal in the Y axis (rad/s)
+"fBodyGyro-mean()-Z"
+                Mean of frequency domain body gyrometer signal in the Z axis (rad/s)
+"fBodyGyro-meanFreq()-X"
+                Mean frequency of frequency domain body gyrometer signal in the X axis (rad/s)
+"fBodyGyro-meanFreq()-Y" 
+                Mean frequency of frequency domain body gyrometer signal in the Y axis (rad/s)
+"fBodyGyro-meanFreq()-Z"
+                Mean frequency of frequency domain body gyrometer signal in the Z axis (rad/s)
+"fBodyAccMag-mean()" 
+                Mean of frequency domain body gacceleration magnitude (rad/s)
+"fBodyAccMag-meanFreq()"         
+                Mean frequency of frequency domain body gacceleration magnitude (rad/s)
+"fBodyBodyAccJerkMag-mean()" 
+                
+"fBodyBodyAccJerkMag-meanFreq()"  
+"fBodyBodyGyroMag-mean()"        
+"fBodyBodyGyroMag-meanFreq()"     
+"fBodyBodyGyroJerkMag-mean()"     
+"fBodyBodyGyroJerkMag-meanFreq()"
